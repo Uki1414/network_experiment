@@ -80,6 +80,8 @@ betweenness(g, directed=FALSE, weights=NA, normalized=TRUE)
 |`task3_2_models.png / .pdf`|行がER・WS・BA、列が次数・近接・媒介|
 |`task3_2_sbm.png / .pdf`|SBMの次数・近接・媒介・固有ベクトル|
 |`task3_submission_sbm_betweenness.png / .pdf`|提出候補：SBMの媒介中心性を単独で表示|
+|`task3_submission_ba_comparison.png / .pdf`|提出用：BAの次数・近接・媒介中心性を同じ配置で比較|
+|`task3_submission_ba_betweenness.png / .pdf`|提出用の別案：BAの媒介中心性だけを大きく表示|
 
 全て `output/task3/figures/` に保存。提出候補の単独図は、集団間の橋渡しが大きなノードとして見えるため、媒介中心性を説明しやすい。
 
@@ -117,7 +119,9 @@ eigen_centrality(g, directed=FALSE, weights=NA)$vector
 
 ## 提出について
 
-授業ページの課題3-2は、可視化した結果のうち1つを画像またはPDFでメール添付して提出する指定（期限10/29）。提出候補として `task3_submission_sbm_betweenness.pdf` を用意した。メール送信は行っていない。
+授業ページの課題3-2は、可視化した結果のうち1つを画像またはPDFでメール添付して提出する指定（期限10/29）。ユーザーの希望に合わせ、BAモデルの `task3_submission_ba_comparison.pdf` を提出候補とする。次数・近接・媒介中心性を1枚で比較でき、BAモデルの条件N=200、m=2を図中に明記した。1種類を単独で示したい場合は `task3_submission_ba_betweenness.pdf` も使える。メール送信は行っていない。
+
+添付図の説明例：「BAモデル（N=200、m=2、無向グラフ）について、次数・近接・媒介中心性が高いほどノードが大きくなるように可視化した。各図のノード配置は固定した。今回のグラフではノード4が3種類全てで1位となり、ハブが全体への近さと最短経路の仲介でも高く評価された。一方、下位を含む順位は中心性によって異なった。」
 
 ## 参考資料
 

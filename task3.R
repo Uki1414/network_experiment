@@ -128,6 +128,18 @@ save_figure("task3_submission_sbm_betweenness", 7.5, 7.5, function() {
   plot_centrality("sbm_separated", "betweenness_normalized", "SBM - Betweenness centrality", label_rank = 5, label_cex = 1)
   legend("topleft", legend = paste("Given block", 1:4), pch = 19, col = palette, bty = "n", cex = 0.85)
 }, res = 150)
+save_figure("task3_submission_ba_comparison", 15, 5.8, function() {
+  par(mfrow = c(1,3), mar = c(1.7,0.3,2.5,0.3), oma = c(1.2,0,2.2,0))
+  for (j in 1:3) plot_centrality("ba_m2", fields[j], metric_names[j])
+  mtext("BA model: N=200, m=2 (undirected)", side = 3, outer = TRUE, line = 0.3, font = 2, cex = 1.15)
+  mtext("Same node positions in all panels. Larger nodes = higher centrality. Outlined nodes: top 5 ranks.",
+        side = 1, outer = TRUE, line = 0, cex = 0.85)
+}, res = 150)
+save_figure("task3_submission_ba_betweenness", 7.5, 7.5, function() {
+  par(mfrow = c(1,1), mar = c(2.5,0.4,3.5,0.4))
+  plot_centrality("ba_m2", "betweenness_normalized", "BA - Betweenness centrality", label_rank = 5, label_cex = 1)
+  mtext("N=200, m=2, undirected | Larger nodes = higher centrality", side = 3, line = 0.2, cex = 0.85)
+}, res = 150)
 
 # ランキングの概要も実測値から生成する。
 lines <- c("# 中心性ランキング（実測値）", "", "ノードIDはRの1始まり。課題1の同一グラフ内で比較する。", "",
