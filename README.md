@@ -1,5 +1,21 @@
 # 情報メディア実験：ネットワーク分析
 
+## 課題3
+
+```sh
+Rscript task3.R
+```
+
+- `03_start.R`：中心性の計算と可視化を少しずつ試すコード。
+- `task3.R`：次数・近接・媒介・固有ベクトル中心性、ランキング比較、可視化。
+- `task3_notes.md`：中心性の定義、実測結果、考察。
+- `output/task3/node_centralities.csv`：4モデル全800ノードの値と順位。
+- `output/task3/top_rankings.csv`、`rankings.md`：上位5位以内。同順位も含む。
+- `output/task3/ranking_comparison.csv`：順位相関と上位集合の重なり。
+- `output/task3/figures/`：比較図と提出用の単独図（PNG / PDF）。
+
+課題1の保存済みグラフを使う。今回は近接・固有ベクトル中心性の解釈のため、連結なER・WS・BA・SBMの4条件を選択している。
+
 ## 課題2
 
 課題1と同じグラフを読み込み、次数分布（線形・両対数）、全体クラスタリング係数、平均経路長を求める。
